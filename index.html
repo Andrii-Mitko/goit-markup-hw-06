@@ -33,7 +33,7 @@
               <a class="menu-studio current" href="./index.html">Studio</a>
             </li>
             <li class="header-link">
-              <a class="menu-studio" href="">Portfolio</a>
+              <a class="menu-studio" href="#portfolio">Portfolio</a>
             </li>
             <li class="header-link">
               <a class="menu-studio" href="">Contacts</a>
@@ -204,7 +204,7 @@
 
       <!-- #region Our Team -->
 
-      <section class="section container-team none">
+      <section class="section container-team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -400,7 +400,7 @@
 
       <!-- #region Our Portfolio -->
 
-      <section class="section none" id="portfolio">
+      <section class="section" id="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -534,7 +534,7 @@
 
     <!-- #region Footer -->
 
-    <footer class="section-footer none">
+    <footer class="section section-footer">
       <div class="container footer-container">
         <div class="footer-logo">
           <a href="./index.html" class="top-logo-footer"
@@ -598,7 +598,7 @@
     <!-- #endregion Footer -->
 
     <!-- #region backdrop -->
-    <div class="backdrop none" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="button-close" type="button" data-modal-close>
           <svg class="close" width="8" height="8">
@@ -668,14 +668,16 @@
               value="true"
             />
             <label class="modal-label-checkbox" for="user-privacy"
-              ><span class="custom-checkbox"
+              >
+              <span class="custom-checkbox"
                 ><svg class="" width="10" height="8">
                   <use href="./images/icons.svg#icon-vector"></use>
                 </svg>
               </span>
+              <span class="custom-policy">
               I accept the terms and conditions of the
               <a class="modul-link" href="">Privacy Policy</a></label
-            >
+            ></span>
           </div>
           <button class="button-modul" type="submit">Send</button>
         </form>
