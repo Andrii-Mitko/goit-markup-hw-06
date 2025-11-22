@@ -56,6 +56,7 @@ button {
   padding-top: 96px;
   padding-bottom: 96px;
 }
+
 .container {
   max-width: 320px;
   padding: 0 16px;
@@ -340,11 +341,17 @@ button {
   padding: 74px 0;
   background: var(--navy-blue);
   background-image: linear-gradient(var(--grey), var(--grey)),
-    url(../images/people-office.jpg);
+    url(../images/people-office-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+@media (min-resolution: 192dpi) {
+  .effective-solutions {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/people-office-mobile@2x.jpg);
+  }
 }
 .solutions-conteiner {
   display: flex;
@@ -390,6 +397,16 @@ button {
   }
   .solutions-conteiner {
     gap: 36px;
+  }
+  .effective-solutions {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/people-office@1x.jpg);
+  }
+  @media (min-resolution: 192dpi) {
+    .effective-solutions {
+      background-image: linear-gradient(var(--grey), var(--grey)),
+        url(../images/people-office@2x.jpg);
+    }
   }
 }
 @media screen and (min-width: 1158px) {

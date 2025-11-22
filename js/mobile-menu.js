@@ -3,11 +3,17 @@
   const closeBtn = document.querySelector("[data-menu-close]");
   const mobileMenu = document.querySelector(".mobile-menu");
 
-  openBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("is-open");
-  });
+  if (!mobileMenu) return;
 
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("is-open");
-  });
+  if (openBtn) {
+    openBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("is-open");
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+    });
+  }
 })();
