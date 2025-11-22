@@ -752,6 +752,7 @@ button {
 /* #region Footer */
 
 .section-footer {
+  display: flex;
   background: var(--navy-blue);
 }
 .footer-container {
@@ -889,15 +890,16 @@ button {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 92px;
   }
   .footer-logo {
     max-width: 264px;
     text-align: left;
     margin-right: 24px;
+    margin-left: 92px;
   }
   .subscribe-conteiner {
     text-align: left;
+    margin-left: 92px;
   }
   .subscribe {
     margin-bottom: 0;
@@ -914,15 +916,18 @@ button {
   }
 }
 @media screen and (min-width: 1158px) {
-  .footer-container {
-    justify-content: space-between;
-    padding-left: 15px;
-  }
   .social-media {
     margin-bottom: 0px;
+    margin-right: 80px;
   }
   .footer-logo {
-    margin-right: 0;
+    margin-bottom: 0;
+    margin-right: 120px;
+    margin-left: 0;
+  }
+  .subscribe-conteiner {
+    text-align: left;
+    margin-left: 0;
   }
 }
 
