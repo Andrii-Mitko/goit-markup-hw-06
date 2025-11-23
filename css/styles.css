@@ -287,6 +287,13 @@ button {
   gap: 40px;
   margin-bottom: auto;
 }
+.mobile-studio {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--ocean);
+}
 .mobile-menu-studio {
   font-weight: 700;
   font-size: 36px;
@@ -306,6 +313,15 @@ button {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+.mobile-contacts-tel {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--ocean);
 }
 .mobile-contacts {
   font-style: normal;
@@ -661,7 +677,7 @@ button {
 }
 
 .portfolio-item {
-  width: 288px;
+  width: 100%;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -729,7 +745,7 @@ button {
     row-gap: 72px;
   }
   .portfolio-item {
-    width: 356px;
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -738,7 +754,7 @@ button {
     row-gap: 48px;
   }
   .portfolio-item {
-    width: 360px;
+    flex-basis: calc((100% - 48px) / 3);
     box-shadow: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
