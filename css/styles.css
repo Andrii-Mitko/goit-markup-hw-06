@@ -357,7 +357,7 @@ button {
   padding: 74px 0;
   background: var(--navy-blue);
   background-image: linear-gradient(var(--grey), var(--grey)),
-    url(../images/people-office-mobile@1x.jpg);
+    url(../images/office-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -366,7 +366,7 @@ button {
 @media (min-resolution: 192dpi) {
   .effective-solutions {
     background-image: linear-gradient(var(--grey), var(--grey)),
-      url(../images/people-office-mobile@2x.jpg);
+      url(../images/office-mobile@2x.jpg);
   }
 }
 .solutions-conteiner {
@@ -417,12 +417,12 @@ button {
   }
   .effective-solutions {
     background-image: linear-gradient(var(--grey), var(--grey)),
-      url(../images/people-office@1x.jpg);
+      url(../images/office-tablet@1x.jpg);
   }
   @media (min-resolution: 192dpi) {
     .effective-solutions {
       background-image: linear-gradient(var(--grey), var(--grey)),
-        url(../images/people-office@2x.jpg);
+        url(../images/office-tablet@2x.jpg);
     }
   }
 }
@@ -437,6 +437,16 @@ button {
   .button-solutions:hover,
   .button-solutions:focus {
     background: var(--ocean);
+  }
+  .effective-solutions {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/office-desktop@1x.jpg);
+  }
+  @media (min-resolution: 192dpi) {
+    .effective-solutions {
+      background-image: linear-gradient(var(--grey), var(--grey)),
+        url(../images/office-desktop@2x.jpg);
+    }
   }
 }
 
@@ -669,14 +679,15 @@ button {
   position: relative;
   overflow: hidden;
 }
-
-.portfolio-img {
+.portfolio-img-foto {
   display: block;
   width: 100%;
   height: auto;
   transition: transform 300ms ease;
 }
-
+.portfolio-div:hover .portfolio-img-foto {
+  transform: scale(1.05);
+}
 .portfolio-curtain-text {
   position: absolute;
   top: 0;
@@ -740,11 +751,8 @@ button {
   .portfolio-item:hover .portfolio-curtain-text {
     transform: translateY(0%);
   }
-
-  .portfolio-div:hover .portfolio-img {
-    transform: scale(1.05);
-  }
 }
+
 /* #endregion  Our Portfolio */
 
 /* #region Footer */
@@ -954,7 +962,7 @@ button {
   pointer-events: auto;
 }
 .backdrop:not(.is-open) .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 .modal {
   position: absolute;
@@ -964,7 +972,6 @@ button {
   min-height: 623px;
   overflow: auto;
   padding: 72px 16px 24px 16px;
-
   border-radius: 4px;
   transform: translate(-50%, -50%);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -1007,7 +1014,7 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-odal-text {
+.modal-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1075,21 +1082,14 @@ odal-text {
 .modal-checkbox {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   border-radius: 4px;
-  width: 256px;
-  height: 16px;
   margin-bottom: 24px;
 }
 .modal-label-checkbox {
   display: flex;
   align-items: center;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--light-slate);
 }
 .custom-checkbox {
   display: inline-flex;
@@ -1099,9 +1099,12 @@ odal-text {
   height: 16px;
   width: 16px;
   border-radius: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
   cursor: pointer;
   border: 1px solid var(--navy-blue-modal);
   fill: transparent;
+  flex-shrink: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1110,6 +1113,13 @@ odal-text {
   fill: var(--cloud);
   background-color: var(--ocean);
   border: none;
+}
+.custom-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
 }
 .modul-link {
   line-height: 1.33;
@@ -1166,7 +1176,7 @@ odal-text {
   .button-close:focus .close {
     fill: var(--white);
   }
-  .m .modal-input:hover + .modal-icon-item,
+  .modal-input:hover + .modal-icon-item,
   .modal-input:focus + .modal-icon-item {
     fill: var(--iris);
   }
